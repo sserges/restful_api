@@ -23,12 +23,16 @@ const server = http.createServer((req, res) => {
   // Get the HTTP method
   const method = req.method.toLowerCase()
 
+  // Get the headers as an object
+  const headers = req.headers
+
   res.end('Hello World')
 
-  // console.log(
-  //   `Request received on path: ${trimmedPath} with method ${method} and with these query string parameters ${queryStringObject}`
-  // )
+  console.log(
+    `Request received on path: ${trimmedPath} with method ${method} and with these query string parameters`
+  )
   console.log(queryStringObject)
+  console.log('headers', headers)
 })
 
 server.listen(PORT, () => {
