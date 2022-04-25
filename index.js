@@ -17,9 +17,12 @@ const server = http.createServer((req, res) => {
   const path = parsedUrl.pathname
   const trimmedPath = path.replace(/^\/+|\/+$/g, '')
 
+  // Get the HTTP method
+  const method = req.method.toLowerCase()
+
   res.end('Hello World')
 
-  console.log(`Request received on path: ${trimmedPath}`)
+  console.log(`Request received on path: ${trimmedPath} with method ${method}`)
 })
 
 server.listen(PORT, () => {
