@@ -9,7 +9,7 @@ const https = require('https')
 const fs = require('fs')
 
 const config = require('./config')
-const unifiedServer = require('./unified_server')
+const unifiedServer = require('./lib/unified_server')
 
 const HTTP_PORT = config.httpPort
 const HTTPS_PORT = config.httpsPort
